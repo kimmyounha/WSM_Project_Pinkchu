@@ -1,0 +1,164 @@
+      body {
+          background-color: #FFFCF1;
+      }
+
+      td {
+          vertical-align: top;
+          /* 날짜를 보여주는 글자를 위로 정렬 */
+      }
+
+      .Calendar {
+          margin-top: 3rem;
+          width: 100%;
+          /* 달력 가로 길이*/
+          height: 33.35rem;
+          /* 달력 세로 길이*/
+          text-align: center;
+          /* 월 나타내는 글자 위치 설정 */
+          background: #FFEBF0;
+          /*달력 배경색 */
+          border-collapse: collapse;
+          border: 0.5rem ridge;
+          /*달력 테두리 굵기*/
+          border-color: #F25278;
+          /* 달력 테두리 색*/
+
+      }
+
+      .Calendar>thead>tr:first-child>td {
+          font-family: Inter;
+          /* 글꼴 설정 */
+          color: #F25278;
+          font-size: 1.8em;
+          /* @@년 @@월 @@일 글자 크기 설정 */
+          font-weight: bold;
+          padding-bottom: 1rem;
+      }
+
+      .Calendar>thead>tr:last-child>td {
+          font-family: Inter;
+          /* 글꼴 설정 */
+          font-weight: 400;
+          /*월 나타내는 글자 크기 굵기 설정*/
+          font-size: 1.2em;
+          /* @요일 글자 크기 설정 */
+      }
+
+      .Calendar>tbody>tr>td>p {
+          font-family: Inter;
+          /* 날짜(숫자) 글자 크기 설정 */
+          height: 45;
+          width: 35;
+          transition-duration: .20s;
+          line-height: 20px;
+          /* 달력 안의 둥근 원의 크기 */
+          margin: 4px;
+          /*달력 글자 박스 간의 여백 설정*/
+          display: block;
+          position: relative;
+          /*달력 안에 날짜 글자 위치*/
+
+      }
+
+      .Calendar>tbody>tr>td>p::after {
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: rgb(255, 183, 243);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+      }
+
+      .pastDay {
+          font-family: Inter;
+          color: rgb(164, 164, 164);
+          /* 지나간 날짜 글씨 색 설정 */
+      }
+
+      .today {
+          font-family: Inter;
+          background-color: #FF7799;
+          color: #fff;
+          /* 그 당일 날짜의 글씨 색 설정 */
+          font-weight: 700;
+          /* 그 당일 날짜의 글씨 굵기 설정 */
+          cursor: pointer;
+      }
+
+      .futureDay {
+          font-family: Inter;
+          background-color: #fffefe;
+      }
+
+      .futureDay:hover {
+          background: #fbdddd;
+          /* 마우스 올려놨을때 보이는 색 */
+      }
+
+      .futureDay.choiceDay,
+      .today.choiceDay {
+          background: #F25278;
+          color: #fff;
+      }
+
+      .heart_box {
+          text-align: center;
+          margin-bottom: 1rem;
+      }
+
+      .img_heart {
+          margin-left: 0.5rem;
+          width: 2.1rem;
+          height: 2.1rem;
+      }
+
+      .diary {
+          margin-top: 3rem;
+          background-color: #FBC9D5;
+          padding: 1rem;
+          border: 0.5rem groove #F25278;
+
+      }
+      .title_text{
+        text-align: center;
+        background-color: #FFEBF0;
+    }
+
+    
+      .diary input{
+        background-color: #FFEBF0;
+
+        border: none;
+        outline: none;
+      }
+
+      .diary .detail_ta {
+        width: 100%;
+        height: 25rem;
+        color: #000000;
+        /* 일기 안의 텍스트 색 설정 */
+        background: #FFEBF0;
+        /* 일기 텍스트 박스의 배경 색 설정 */
+        border: none;
+        /*테두리선 없애는 설정 */
+        outline: none;
+        /* 포커스 시 나타나는 외곽선 없애기 */
+        text-align: center;
+        /* 가운데 정렬을 추가 설정 */
+        font-size: 1rem;
+        /* 일기 내용 글씨 크기 설정 */
+        padding: 0.7rem;
+        resize: none;     /* 일기 내용 칸의 크기 고정 */
+        margin-bottom: 0.5rem;
+    }
+      .bi{
+      font-size: 1.5rem;
+      }
+      .bi-trash{
+        margin-left: 0.5rem;
+      }
+      .bi-download{
+       float: right;
+       margin-right: 0.5rem;
+      }

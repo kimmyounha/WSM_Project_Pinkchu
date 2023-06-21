@@ -1,0 +1,21 @@
+body {
+  background-color: #FFFCF1;
+}
+.heart_box {
+  text-align: right;
+  margin-top: 3rem;
+}
+
+.h_img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.h_count {
+  height: 3rem;
+  width: 3rem;
+}
+
+.item_box {
+  margin-top: 3rem;
+}
