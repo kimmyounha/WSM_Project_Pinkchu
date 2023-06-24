@@ -1,21 +1,29 @@
-.heart_box {
+.h_box {
+  margin-top:  6rem;
   text-align: right;
-  margin-top: 6rem;
+  width: 100%;
 }
 
 .h_img {
-  height: 3rem;
-  width: 3rem;
+  height: 2.7rem;
+  width: 2.7rem;
 }
 
 .h_count {
-  height: 3rem;
-  width: 3rem;
+  display: inline-block;
+  text-align : right;
+  padding-top: 2px;
+  height: 2.7rem;
+  width: 2.7rem;
 }
 
 .item_box {
   margin-top: 3rem;
 }
-.card-body{
-  
+.main-footer{
+  margin-top:  10rem;
+}
+.op{
+  background-color: #FFE1E9;
+  padding: 8.5px;
 }

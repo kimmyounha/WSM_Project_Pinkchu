@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="css/reset.css">
 </head>
 
-<body>
+<body style="background-image: url('images/bgimg.png');">
   <header>
     <div class="nav_bar">
       <a href="#"><img class="logo" src="images\logo.png" /></a>
@@ -52,25 +52,32 @@
       <div class="col-lg-6">
         <div class="container-fluid">
           <div class="container user_box">
-            <strong class="text_info">닉네임 : </strong>
-            <strong class="text_info">ID : </strong>
-            <strong class="text_info">계정연동 : </strong>
+            <strong class="text_info">닉네임 : <strong class="text_info2">테스터 </strong></strong>
+            <strong class="text_info">ID : <strong class="text_info2">mirim1234567 </strong></strong>
+            <strong class="text_info">계정연동 : <strong class="text_info2">w1234@e-mirim.hs.kr </strong></strong>
           </div>
           <div class="history_box">
-            <strong class="container text_info">구매내역 및 캐릭터 코스튬
+            <strong class="container text_info pay">구매내역 & 캐릭터 커스텀
               <i class="bi bi-download"></i>
             </strong>
             <div class="container">
               <div class="container img_box">
                 <img src="test.jpeg" class="img_info" alt="test.jpeg">
-                <input type="checkbox" name="xxx" value="yyy" checked>
+                <span class="check_box">
+                  <input type="checkbox" name="xxx" value="yyy" checked>
+                </span>
               </div>
               <div class="container img_box">
                 <img src="test.jpeg" class="img_info" alt="test.jpeg">
-
+                <span class="check_box">
+                  <input type="checkbox" name="xxx" value="yyy" checked>
+                </span>
               </div>
               <div class="container img_box">
                 <img src="test.jpeg" class="img_info" alt="test.jpeg">
+                <span class="check_box">
+                  <input type="checkbox" name="xxx" value="yyy" checked>
+                </span>
               </div>
             </div>
           </div>
@@ -80,22 +87,64 @@
         <div class="chart_box">
           <ul class="axis_y">
             <li class="item">0<span class="blind">시간</span></li>
+            <li class="item">5<span class="blind">시간</span></li>
             <li class="item">10<span class="blind">시간</span></li>
+            <li class="item">15<span class="blind">시간</span></li>
             <li class="item">20<span class="blind">시간</span></li>
-            <li class="item">30<span class="blind">시간</span></li>
-            <li class="item">40<span class="blind">시간</span></li>
-            <li class="item">50<span class="blind">시간</span></li>
-            <li class="item">60<span class="blind">시간</span></li>
-            <li class="item">70<span class="blind">시간</span></li>
-            <li class="item">80<span class="blind">시간</span></li>
-            <li class="item">90<span class="blind">시간</span></li>
-            <li class="item">100<span class="blind">시간</span></li>
+            <li class="item">25<span class="blind">시간</span></li>
+            <li class="item">31<span class="blind">시간</span></li>
+
           </ul>
           <ul class="axis_x">
             <li class="item">
               <div class="text_box">
-                <span class="time">img</span>
-                <strong class="text_graph">개수</strong>
+                <span class="time"><img class="heart_img_info" src="images\heart_pink.png" alt=""></span>
+                <strong class="text_graph">3</strong>
+              </div>
+              <button type="button" class="graph">
+                <span class="time data1" style="height:12%;"><span class="blind">data 타입 1</span></span>
+              </button>
+            </li>
+            <li class="item">
+              <div class="text_box">
+                <span class="time"><img class="heart_img_info" src="images\heart_orange.png" alt=""></span>
+                <strong class="text_graph">7</strong>
+              </div>
+              <button type="button" class="graph">
+                <span class="time data1" style="height:26%;"><span class="blind">data 타입 1</span></span>
+              </button>
+            </li>
+            <li class="item">
+              <div class="text_box">
+                <span class="time"><img class="heart_img_info" src="images\heart_yellow.png" alt=""></span>
+                <strong class="text_graph">13</strong>
+              </div>
+              <button type="button" class="graph">
+                <span class="time data1" style="height:45%;"><span class="blind">data 타입 1</span></span>
+              </button>
+            </li>
+            <li class="item">
+              <div class="text_box">
+                <span class="time"><img class="heart_img_info" src="images\heart_green.png" alt=""></span>
+                <strong class="text_graph">7</strong>
+              </div>
+              <button type="button" class="graph">
+                <span class="time data1" style="height:27%;"><span class="blind">data 타입 1</span></span>
+              </button>
+            </li>
+            <li class="item">
+              <div class="text_box">
+                <span class="time"><img class="heart_img_info" src="images\heart_blue.png" alt=""></span>
+                <strong class="text_graph">2</strong>
+              </div>
+              <button type="button" class="graph">
+                <span class="time data1" style="height:10%;"><span class="blind">data 타입 1</span></span>
+              </button>
+            </li>
+            <li class="item">
+              <div class="text_box">
+                <span class="time"><img class="heart_img_info" src="images\heart_rain.png" alt=""></span>
+                <strong class="text_graph">18</strong>
               </div>
               <button type="button" class="graph">
                 <span class="time data1" style="height:60%;"><span class="blind">data 타입 1</span></span>
@@ -103,56 +152,11 @@
             </li>
             <li class="item">
               <div class="text_box">
-                <span class="time">img</span>
-                <strong class="text_graph">개수</strong>
+                <span class="time"><img class="heart_img_info" src="images\heart_dark.png" alt=""></span>
+                <strong class="text_graph">4</strong>
               </div>
               <button type="button" class="graph">
-                <span class="time data1" style="height:60%;"><span class="blind">data 타입 1</span></span>
-              </button>
-            </li>
-            <li class="item">
-              <div class="text_box">
-                <span class="time">img</span>
-                <strong class="text_graph">개수</strong>
-              </div>
-              <button type="button" class="graph">
-                <span class="time data1" style="height:60%;"><span class="blind">data 타입 1</span></span>
-              </button>
-            </li>
-            <li class="item">
-              <div class="text_box">
-                <span class="time">img</span>
-                <strong class="text_graph">개수</strong>
-              </div>
-              <button type="button" class="graph">
-                <span class="time data1" style="height:60%;"><span class="blind">data 타입 1</span></span>
-              </button>
-            </li>
-            <li class="item">
-              <div class="text_box">
-                <span class="time">img</span>
-                <strong class="text_graph">개수</strong>
-              </div>
-              <button type="button" class="graph">
-                <span class="time data1" style="height:60%;"><span class="blind">data 타입 1</span></span>
-              </button>
-            </li>
-            <li class="item">
-              <div class="text_box">
-                <span class="time">img</span>
-                <strong class="text_graph">개수</strong>
-              </div>
-              <button type="button" class="graph">
-                <span class="time data1" style="height:60%;"><span class="blind">data 타입 1</span></span>
-              </button>
-            </li>
-            <li class="item">
-              <div class="text_box">
-                <span class="time">img</span>
-                <strong class="text_graph">개수</strong>
-              </div>
-              <button type="button" class="graph">
-                <span class="time data1" style="height:60%;"><span class="blind">data 타입 1</span></span>
+                <span class="time data1" style="height: 15%;"><span class="blind">data 타입 1</span></span>
               </button>
           </ul>
         </div>

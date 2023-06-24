@@ -6,6 +6,13 @@ ul,
 li {
     list-style: none;
 }
+:root {
+    accent-color:#f54098c3;
+}
+.check_box{
+    float: right;
+    margin-top: 3.3rem;
+}
 .bodycon{
     margin-top: 6rem;
 }
@@ -23,25 +30,37 @@ li {
 
 }
 
-.user_box {
+.user_box { /*user정보창*/
     margin-top: 3rem;
-    background-color: #c1c1c7;
-    padding-bottom: 0.5rem;
+    background: #ffebf0e0;
+    border: 0.1rem solid;
+    border-color: #a13e55;
+    padding-bottom: 0.7rem;
+    
 }
 
 .history_box {
     margin-top: 1rem;
-    background-color: #9799a4;
+    border: 0.1rem solid;
+    border-color: #a13e55;
+    background: #ffebf0a0;
+}
+.bi-download{
+    float: right;
+    padding-right: 0.5rem;
+    font-size: 1rem;
 }
 
 .chart_box {
     margin-top: 3rem;
-    background-color: #d2d2d2;
+    background: #ffebf0a0;
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 10rem;
     padding-left: 20px;
     box-sizing: border-box;
-    height: 37rem;
+    height: 30.5rem;
+    border: 0.1rem solid;
+    border-color: #a13e55;
 }
 
 .axis_y {
@@ -68,7 +87,7 @@ li {
     bottom: 0;
     right: 0;
     width: 1px;
-    background: #d3d3d3;
+    background: #ffebf0a0;
 
 }
 
@@ -77,8 +96,7 @@ li {
     position: relative;
     padding: 0;
     height: 100%;
-    border-bottom: 1px solid #d3d3d3;
-
+    
 }
 
 .axis_x .item {
@@ -96,24 +114,33 @@ li {
 
 }
 
-.text_info {
+.text_info {    /*텍스트 정보*/
     padding-top: 0.5rem;
     display: block;
-    font-size: 14px;
+    font-size: 0.8rem;
     line-height: 19px;
-    color: #212020;
+    color: #000000;
+
+}
+.text_info2{
+    font-size: 0.77rem;
+    line-height: 19px;
+    color: #101010ef;
 }
 
 .img_info {
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
 }
 
 .img_box {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: #8f5f8b;
+    margin-bottom: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #ffffff;
+}
+.pay{
+    margin-bottom: 1rem;
 }
 
 .axis_x .item .text_box .text_graph {
@@ -127,9 +154,10 @@ li {
 
 .axis_x .item .text_box .time {
     display: block;
-    margin-top: 3px;
     font-size: 12px;
-    color: #999;
+}
+.heart_img_info{
+    width: 1.32rem;
 }
 
 .axis_x .graph {
@@ -138,9 +166,9 @@ li {
     position: relative;
     margin: 0 auto;
     padding: 0;
-    width: 35px;
+    width: 42px;
     height: 100%;
-    background: #d2d2d2;
+    background: #ffebf0a0;
     border-radius: 4px 4px 0 0;
     overflow: hidden;
 }
@@ -149,7 +177,6 @@ li {
     display: block;
     position: relative;
     margin-bottom: -4px;
-    padding-top: 4px;
     box-sizing: content-box;
     width: 100%;
     border-radius: 3px 3px 0 0;
@@ -162,4 +189,12 @@ li {
 
 .axis_x button.graph {
     border: 0;
+}
+@media screen and (max-width: 768px) {
+    .bodycon {
+        margin-top: 4rem;
+    }
+    .axis_x .graph {
+        width: 35px;
+    }
 }
