@@ -190,6 +190,7 @@ footer {
 
 .main-footer {
   justify-content: center;
+  text-align: center;
   position: static;
 
 }

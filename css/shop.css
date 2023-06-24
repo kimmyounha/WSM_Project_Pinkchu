@@ -1,29 +1,47 @@
 .h_box {
   margin-top:  6rem;
-  text-align: right;
+  text-align: center;
   width: 100%;
+  background-color: #fff;
 }
-
-.h_img {
-  height: 2.7rem;
-  width: 2.7rem;
-}
-
-.h_count {
-  display: inline-block;
-  text-align : right;
-  padding-top: 2px;
-  height: 2.7rem;
-  width: 2.7rem;
-}
-
 .item_box {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 .main-footer{
   margin-top:  10rem;
 }
-.op{
-  background-color: #FFE1E9;
-  padding: 8.5px;
+
+ul,
+li {
+    list-style: none;
+    
+}
+.axis_x {
+  display: flex;
+  position: relative;
+  padding: 0;
+  height: 100%;
+  
+}
+.axis_x .item {
+  flex: 1;
+  position: relative;
+
+}
+.axis_x .item .text_box {
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  transform: translate(-30%, 0);
+
+}
+
+.heart_img_info{
+  width: 2rem;
+}
+.axis_x .item .text_box .text_graph {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 19px;
+  color: #4a4a4a;
 }
