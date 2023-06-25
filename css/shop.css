@@ -1,47 +1,74 @@
 .h_box {
-  margin-top:  6rem;
+  margin-top: 6rem;
   text-align: center;
   width: 100%;
   background-color: #fff;
-}
-.item_box {
-  margin-top: 5rem;
-}
-.main-footer{
-  margin-top:  10rem;
+  border: 2px solid #a13e55cb;
 }
 
-ul,
-li {
-    list-style: none;
-    
+.item_box {
+  margin-top: 3rem;
 }
+
 .axis_x {
+
   display: flex;
   position: relative;
   padding: 0;
   height: 100%;
-  
-}
-.axis_x .item {
-  flex: 1;
-  position: relative;
-
-}
-.axis_x .item .text_box {
-  position: absolute;
-  left: 50%;
-  text-align: center;
-  transform: translate(-30%, 0);
 
 }
 
-.heart_img_info{
+.heart_img_info {
+  padding-top: 0.8rem;
   width: 2rem;
+  margin-left: 0.4rem;
 }
-.axis_x .item .text_box .text_graph {
-  display: block;
+
+.text_info {
+  display: inline-block;
   font-size: 0.8rem;
   line-height: 19px;
+  margin-left: 0.4rem;
   color: #4a4a4a;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.h-100{
+  background-color: #ffe2ead0;
+  
+}
+.h-101{
+  background-color: #9d9a9ba3;
+  
+}
+.card-img-top{
+
+}
+.card-title {
+  font-size: 14px;
+  color: #101010ef;
+  font-weight: bold;
+}
+.card-price{
+  font-size: 9px;
+  font-weight: bold;
+}
+.h_img_info{
+  width: 1rem;
+  height: 1rem;
+}
+.text_info1{
+  font-size: 0.7rem;
+  color: #101010ef;
+  font-weight: bold;
+}
+.btn{
+  margin-top: 0.5rem;
+}
+
+.main-footer {
+  margin-top: 10rem;
 }

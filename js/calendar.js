@@ -1,87 +1,537 @@
-     window.onload = function () { buildCalendar(); }    // 웹 페이지가 로드되면 buildCalendar 실행
+window.onload = function () {
+    buildCalendar();
+}
 
-        let nowMonth = new Date();  // 현재 달을 페이지를 로드한 날의 달로 초기화
-        let today = new Date();     // 페이지를 로드한 날짜를 저장
-        today.setHours(0, 0, 0, 0);    // 비교 편의를 위해 today의 시간을 초기화
+let nowMonth = new Date();
+let today = new Date();
+today.setHours(0, 0, 0, 0);
 
-        // 달력 생성 : 해당 달에 맞춰 테이블을 만들고, 날짜를 채워 넣는다.
-        function buildCalendar() {
+function buildCalendar() {
+    let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
+    let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);
 
-            let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);     // 이번달 1일
-            let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);  // 이번달 마지막날
+    let tbody_Calendar = document.querySelector(".Calendar > tbody");
+    document.getElementById("calYear").innerText = nowMonth.getFullYear();
+    document.getElementById("calMonth").innerText = leftPad(nowMonth.getMonth() + 1);
 
-            let tbody_Calendar = document.querySelector(".Calendar > tbody");
-            document.getElementById("calYear").innerText = nowMonth.getFullYear();             // 연도 숫자 갱신
-            document.getElementById("calMonth").innerText = leftPad(nowMonth.getMonth() + 1);  // 월 숫자 갱신
+    while (tbody_Calendar.rows.length > 0) {
+        tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
+    }
 
-            while (tbody_Calendar.rows.length > 0) {                        // 이전 출력결과가 남아있는 경우 초기화
-                tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
+    let nowRow = tbody_Calendar.insertRow();
+
+    for (let j = 0; j < firstDate.getDay(); j++) {
+        let nowColumn = nowRow.insertCell();
+    }
+
+    for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {
+        let nowColumn = nowRow.insertCell();
+        let newDIV = document.createElement("p");
+        newDIV.innerHTML = leftPad(nowDay.getDate());
+        nowColumn.appendChild(newDIV);
+
+        if (nowDay.getFullYear() === 2023 && nowDay.getMonth() === 5 && nowDay.getDate() >= 1 && nowDay.getDate() <= 25) {  // 2023년 6월 1일부터 25일까지
+            if (nowDay.getDate() === 1) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_dark2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_rain2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+            } else if (nowDay.getDate() === 2) {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_yellow2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
+
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
+            } else if (nowDay.getDate() === 3) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_rain2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_orange2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                let imageElement3 = document.createElement("img");
+                imageElement3.src = "images/heart_yellow2.png";
+                imageElement3.alt = "하트";
+                imageElement3.classList.add("date-image");
+                newDIV.appendChild(imageElement3);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+                imageElement3.style.position = "absolute";
+                imageElement3.style.left = "40px";
+            } else if (nowDay.getDate() === 4) {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_rain2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
+
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
+            } else if (nowDay.getDate() === 5) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_orange2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_dark2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                let imageElement3 = document.createElement("img");
+                imageElement3.src = "images/heart_rain2.png";
+                imageElement3.alt = "하트";
+                imageElement3.classList.add("date-image");
+                newDIV.appendChild(imageElement3);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+                imageElement3.style.position = "absolute";
+                imageElement3.style.left = "40px";
+            } else if (nowDay.getDate() === 6) {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_yellow2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
+
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
+            } else if (nowDay.getDate() === 7) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_orange2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_rain2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+            } else if (nowDay.getDate() === 8) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_yellow2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_green2.png";
+                imageElement2.alt = "하트"
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+            } else if (nowDay.getDate() === 9) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_orange2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_green2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                let imageElement3 = document.createElement("img");
+                imageElement3.src = "images/heart_rain2.png";
+                imageElement3.alt = "하트";
+                imageElement3.classList.add("date-image");
+                newDIV.appendChild(imageElement3);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+                imageElement3.style.position = "absolute";
+                imageElement3.style.left = "40px";
+            } else if (nowDay.getDate() === 10) {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_yellow2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
+
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
+            } else if (nowDay.getDate() === 11) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_orange2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_rain2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                let imageElement3 = document.createElement("img");
+                imageElement3.src = "images/heart_green2.png";
+                imageElement3.alt = "하트";
+                imageElement3.classList.add("date-image");
+                newDIV.appendChild(imageElement3);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+                imageElement3.style.position = "absolute";
+                imageElement3.style.left = "40px";
+            } else if (nowDay.getDate() === 12) {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_green2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
+
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_rain2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "20px";
+
+
+            } else if (nowDay.getDate() === 13) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_orange2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_dark2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+            } else if (nowDay.getDate() === 14) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_blue2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_rain2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+
+            } else if (nowDay.getDate() === 15) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_rain2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_pink2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                let imageElement3 = document.createElement("img");
+                imageElement3.src = "images/heart_yellow2.png";
+                imageElement3.alt = "하트";
+                imageElement3.classList.add("date-image");
+                newDIV.appendChild(imageElement3);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+                imageElement3.style.position = "absolute";
+                imageElement3.style.left = "40px";
+            } else if (nowDay.getDate() === 16) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_yellow2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_rain2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+            } else if (nowDay.getDate() === 17) {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_green2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
+
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
+            } else if (nowDay.getDate() === 18) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_pink2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_dark2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                let imageElement3 = document.createElement("img");
+                imageElement2.src = "images/heart_yellow2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+            } else if (nowDay.getDate() === 19) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_yellow2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_rain2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+            } else if (nowDay.getDate() === 20) {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_green2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
+
+
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
+            } else if (nowDay.getDate() === 21) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_rain2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_blue2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                let imageElement3 = document.createElement("img");
+                imageElement3.src = "images/heart_yellow2.png";
+                imageElement3.alt = "하트";
+                imageElement3.classList.add("date-image");
+                newDIV.appendChild(imageElement3);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+                imageElement3.style.position = "absolute";
+                imageElement3.style.left = "40px";
+            } else if (nowDay.getDate() === 22) {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_pink2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
+
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
+            } else if (nowDay.getDate() === 23) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_rain2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_yellow2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                let imageElement3 = document.createElement("img");
+                imageElement3.src = "images/heart_green2.png";
+                imageElement3.alt = "하트";
+                imageElement3.classList.add("date-image");
+                newDIV.appendChild(imageElement3);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
+                imageElement3.style.position = "absolute";
+                imageElement3.style.left = "40px";
+            } else if (nowDay.getDate() === 24) {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_rain2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
+
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
+            } else if (nowDay.getDate() === 25) {
+                let imageElement1 = document.createElement("img");
+                imageElement1.src = "images/heart_dark2.png";
+                imageElement1.alt = "하트";
+                imageElement1.classList.add("date-image");
+                newDIV.appendChild(imageElement1);
+
+                let imageElement2 = document.createElement("img");
+                imageElement2.src = "images/heart_rain2.png";
+                imageElement2.alt = "하트";
+                imageElement2.classList.add("date-image");
+                newDIV.appendChild(imageElement2);
+
+                // 이미지 위치 조정
+                imageElement1.style.position = "absolute";
+                imageElement1.style.left = "0";
+                imageElement2.style.position = "absolute";
+                imageElement2.style.left = "20px";
             }
+            else {
+                let imageElement = document.createElement("img");
+                imageElement.src = "images/heart_yellow2.png";
+                imageElement.alt = "하트";
+                imageElement.classList.add("date-image");
+                newDIV.appendChild(imageElement);
 
-            let nowRow = tbody_Calendar.insertRow();        // 첫번째 행 추가           
-
-            for (let j = 0; j < firstDate.getDay(); j++) {  // 이번달 1일의 요일만큼
-                let nowColumn = nowRow.insertCell();        // 열 추가
-            }
-
-            for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {   // day는 날짜를 저장하는 변수, 이번달 마지막날까지 증가시키며 반복  
-
-                let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
-
-
-                let newDIV = document.createElement("p");
-                newDIV.innerHTML = leftPad(nowDay.getDate());        // 추가한 열에 날짜 입력
-                nowColumn.appendChild(newDIV);
-
-                if (nowDay.getDay() == 6) {                 // 토요일인 경우
-                    nowRow = tbody_Calendar.insertRow();    // 새로운 행 추가
-                }
-
-                if (nowDay < today) {                       // 지난날인 경우
-                    newDIV.className = "pastDay";
-                }
-                else if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
-                    newDIV.className = "today";
-                    newDIV.onclick = function () { choiceDate(this); }
-                }
-                else {                                      // 미래인 경우
-                    newDIV.className = "futureDay";
-                    newDIV.onclick = function () { choiceDate(this); }
-                }
-
+                // 이미지 위치 조정
+                imageElement.style.position = "absolute";
+                imageElement.style.left = "0";
             }
         }
-        // 날짜 선택
-        function choiceDate(newDIV) {
-            if (document.getElementsByClassName("choiceDay")[0]) {                              // 기존에 선택한 날짜가 있으면
-                document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");  // 해당 날짜의 "choiceDay" class 제거
-            }
-            newDIV.classList.add("choiceDay");           // 선택된 날짜에 "choiceDay" class 추가
+
+        if (nowDay.getDay() == 6) {
+            nowRow = tbody_Calendar.insertRow();
         }
 
-        // 이전달 버튼 클릭
-        function prevCalendar() {
-            nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() - 1, nowMonth.getDate());   // 현재 달을 1 감소
-            buildCalendar();    // 달력 다시 생성
+        if (nowDay < today) {
+            newDIV.className = "pastDay";
+        } else if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()) {
+            newDIV.className = "today";
+            newDIV.onclick = function () { choiceDate(this); }
+        } else {
+            newDIV.className = "futureDay";
+            newDIV.onclick = function () { choiceDate(this); }
         }
-        // 다음달 버튼 클릭
-        function nextCalendar() {
-            nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, nowMonth.getDate());   // 현재 달을 1 증가
-            buildCalendar();    // 달력 다시 생성
-        }
+    }
+}
 
-        // input값이 한자리 숫자인 경우 앞에 '0' 붙혀주는 함수
-        function leftPad(value) {
-            if (value < 10) {
-                value = "0" + value;
-                return value;
-            }
-            return value;
-        }
-        // JavaScript 코드
-        const heartImage = document.getElementById('heart-image');
-        const diaryContent = document.getElementById('diary-content');
+function choiceDate(newDIV) {
+    if (document.getElementsByClassName("choiceDay")[0]) {
+        document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");
+    }
+    newDIV.classList.add("choiceDay");
+}
 
-        heartImage.addEventListener('click', function () {
-            diaryContent.value += '❤️';
-        });
+function prevCalendar() {
+    nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() - 1, nowMonth.getDate());
+    buildCalendar();
+}
+
+function nextCalendar() {
+    nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, nowMonth.getDate());
+    buildCalendar();
+}
+
+function leftPad(value) {
+    if (value < 10) {
+        value = "0" + value;
+    }
+    return value;
+}

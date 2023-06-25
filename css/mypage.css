@@ -11,7 +11,6 @@ li {
 }
 .check_box{
     float: right;
-    margin-top: 3.3rem;
 }
 .bodycon{
     margin-top: 6rem;
@@ -31,12 +30,22 @@ li {
 }
 
 .user_box { /*user정보창*/
-    margin-top: 3rem;
+    margin-top: 2rem;
     background: #ffebf0e0;
     border: 0.1rem solid;
     border-color: #a13e55;
     padding-bottom: 0.7rem;
-    
+    padding-top: 0.5rem;
+}
+.cher_img_info{
+    width: 100px;
+    height: 120px;
+    border-left: 6px solid #ffffff;
+    vertical-align: middle;
+}
+.h_img_info{
+    width: 1rem;
+    height: 1rem;
 }
 
 .history_box {
@@ -52,13 +61,13 @@ li {
 }
 
 .chart_box {
-    margin-top: 3rem;
+    margin-top: 2rem;
     background: #ffebf0a0;
     position: relative;
     margin-bottom: 10rem;
     padding-left: 20px;
     box-sizing: border-box;
-    height: 30.5rem;
+    height: 34.2rem;
     border: 0.1rem solid;
     border-color: #a13e55;
 }
@@ -113,24 +122,24 @@ li {
     transform: translate(-50%, 0);
 
 }
-
-.text_info {    /*텍스트 정보*/
+.text_info1{
+    font-size: 0.7rem;
+    color: #101010ef;
+    font-weight: bold;
+}
+.text_info2{    /*텍스트 정보*/
     padding-top: 0.5rem;
     display: block;
     font-size: 0.8rem;
     line-height: 19px;
+    font-weight: bold;
     color: #000000;
 
 }
-.text_info2{
-    font-size: 0.77rem;
-    line-height: 19px;
-    color: #101010ef;
-}
-
 .img_info {
     height: 70px;
-    width: 70px;
+    width: 60px;
+    vertical-align: top; 
 }
 
 .img_box {
@@ -196,5 +205,16 @@ li {
     }
     .axis_x .graph {
         width: 35px;
+    }
+    .chart_box {
+        height: 27rem;
+    }
+    .text_info1{
+        font-size: 0.65rem;
+    }
+
+    .axis_x .item .text_box .text_graph {
+        font-size: 9px;
+    
     }
 }

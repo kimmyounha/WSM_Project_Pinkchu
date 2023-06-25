@@ -12,6 +12,12 @@ body {
   height: 100%;
 }
 
+ul,
+li {
+  list-style: none;
+
+}
+
 :root {
   --first-color: #ffffff;
   --second-color: #ffdabf;
@@ -128,16 +134,6 @@ button:hover {
   list-style: none;
   margin: 0 20px;
 }
-
-.btn_preety {
-  /* 사진꾸미러가기 버튼 */
-  width: 150px;
-  height: 38px;
-  font-size: 12px;
-  border: none;
-  background-color: var(--first-color);
-}
-
 .btn_menu {
   /* 햄버거 메뉴 아이콘 */
   display: none;
@@ -147,27 +143,15 @@ button:hover {
 }
 
 
-section>div {
-  /*section 바로 아래있는 div, (타이틀들)*/
-  font-size: 25px;
-  position: absolute;
-  left: 24vw;
-}
-
-.photo {
-  /* 메인화면 섹션들 */
-  margin-top: 250px;
-  /* header 간격*/
-  text-align: center;
-  /* 글 가운데 정렬*/
-}
-
 /* footer */
 .main-footer {
   display: flex;
   padding-top: 1rem;
   border-top: 1px solid black;
   width: 100%;
+  justify-content: center;
+  text-align: center;
+  position: static;
 }
 
 .main-footer li {
@@ -186,13 +170,6 @@ section>div {
 footer {
   font-size: 12px;
   background: #ffd9d9dd;
-}
-
-.main-footer {
-  justify-content: center;
-  text-align: center;
-  position: static;
-
 }
 
 .bxl-github,
@@ -260,4 +237,36 @@ footer {
     height: 40px;
     position: fixed;
   }
+
+  /* footer */
+.footerTitle {
+  font-size: 15px;
+}
+
+.developerFooter {
+  margin-right: 17px;
+}
+
+/* footer */
+
+.footerTitle {
+  font-size: 13px;
+  font-weight:600;
+}
+
+
+/* footer */
+footer {
+  font-size: 9px;
+  background: #ffd9d9dd;
+}
+
+.bxl-github,
+.bxl-twitter,
+.bxl-facebook,
+.bxl-instagram {
+  color: white;
+ font-size: 9px;
+}
+
 }

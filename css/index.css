@@ -153,7 +153,7 @@
 
  .diary .detail_ta {
      width: 100%;
-     height: 25rem;
+     height: 25.3rem;
      color: #000000;
      /* 일기 안의 텍스트 색 설정 */
      background: #c1526c1c;
@@ -173,7 +173,7 @@
  }
 
  .bi {
-     font-size: 1.5rem;
+     font-size: 1.3rem;
  }
 
  .bi-trash {
@@ -185,6 +185,27 @@
      margin-right: 0.5rem;
  }
 
+ .date-cell {
+    position: relative;
+}
+.title_info{
+    font-size: 0.7rem;
+}
+
+.date-image {
+    max-width: 100px;
+    margin-top: 0.5rem;
+    height: auto;
+    width: 1.2rem;
+    /* 이미지 가로 크기 조절 */
+    position: absolute;
+    /*전체화면, 반응형 모두 하트가 아래로 가게 해줌 */
+    bottom: -10px;
+    /* 이미지를 아래로 이동시키는 값 */
+    top: 100%;
+    /* 이미지를 날짜 아래로 이동시킵니다. */
+}
+
  @media screen and (max-width: 768px) {
      .bodycon {
          margin-top: 4rem;
@@ -192,7 +213,7 @@
 
      .Calendar>tbody>tr>td>p {
          /* 날짜(숫자) 글자 크기 설정 */
-         font-size: 0.8rem;
+         font-size: 11px;
 
      }
 
@@ -201,7 +222,7 @@
      }
 
      .Calendar>thead>tr:last-child>td {
-         font-size: 0.9rem;
+         font-size: 0.8rem;
          /* @요일 글자 크기 설정 */
      }
 
@@ -212,4 +233,21 @@
      .diary {
          border: 0.15rem solid #a13e55;
      }
+     .bi {
+        font-size: 1.2rem;
+    }
+
+    .date-image {
+        max-width: 100px;
+        margin-top: 0.5rem;
+        height: auto;
+        width: 0.9rem;
+    }
+    .diary .detail_ta {
+        font-size: 12px;
+
+    }
+    .title_info{
+        font-size: 13px;
+    }
  }
