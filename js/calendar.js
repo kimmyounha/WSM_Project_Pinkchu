@@ -84,7 +84,7 @@ function buildCalendar() {
                 imageElement2.style.position = "absolute";
                 imageElement2.style.left = "20px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "30px";
+                imageElement3.style.left = "40px";
             } else if (nowDay.getDate() === 4) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_rain2.png";
@@ -120,7 +120,7 @@ function buildCalendar() {
                 imageElement2.style.position = "absolute";
                 imageElement2.style.left = "20px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "30px";
+                imageElement3.style.left = "40px";
             } else if (nowDay.getDate() === 6) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_yellow2.png";
@@ -192,7 +192,7 @@ function buildCalendar() {
                 imageElement2.style.position = "absolute";
                 imageElement2.style.left = "20px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "30px";
+                imageElement3.style.left = "40px";
             } else if (nowDay.getDate() === 10) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_yellow2.png";
@@ -228,7 +228,7 @@ function buildCalendar() {
                 imageElement2.style.position = "absolute";
                 imageElement2.style.left = "20px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "30px";
+                imageElement3.style.left = "40px";
             } else if (nowDay.getDate() === 12) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_green2.png";
@@ -310,7 +310,7 @@ function buildCalendar() {
                 imageElement2.style.position = "absolute";
                 imageElement2.style.left = "20px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "30px";
+                imageElement3.style.left = "40px";
             } else if (nowDay.getDate() === 16) {
                 let imageElement1 = document.createElement("img");
                 imageElement1.src = "images/heart_yellow2.png";
@@ -417,7 +417,7 @@ function buildCalendar() {
                 imageElement2.style.position = "absolute";
                 imageElement2.style.left = "20px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "30px";
+                imageElement3.style.left = "40px";
             } else if (nowDay.getDate() === 22) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_pink2.png";
