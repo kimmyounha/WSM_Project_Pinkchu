@@ -48,7 +48,7 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
             } else if (nowDay.getDate() === 2) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_yellow2.png";
@@ -82,9 +82,9 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "40px";
+                imageElement3.style.left = "30px";
             } else if (nowDay.getDate() === 4) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_rain2.png";
@@ -118,9 +118,9 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "40px";
+                imageElement3.style.left = "30px";
             } else if (nowDay.getDate() === 6) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_yellow2.png";
@@ -148,7 +148,7 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
             } else if (nowDay.getDate() === 8) {
                 let imageElement1 = document.createElement("img");
                 imageElement1.src = "images/heart_yellow2.png";
@@ -166,7 +166,7 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
             } else if (nowDay.getDate() === 9) {
                 let imageElement1 = document.createElement("img");
                 imageElement1.src = "images/heart_orange2.png";
@@ -190,9 +190,9 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "40px";
+                imageElement3.style.left = "30px";
             } else if (nowDay.getDate() === 10) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_yellow2.png";
@@ -226,9 +226,9 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "40px";
+                imageElement3.style.left = "30px";
             } else if (nowDay.getDate() === 12) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_green2.png";
@@ -245,7 +245,7 @@ function buildCalendar() {
                 imageElement.style.position = "absolute";
                 imageElement.style.left = "0";
                 imageElement1.style.position = "absolute";
-                imageElement1.style.left = "20px";
+                imageElement1.style.left = "15px";
 
 
             } else if (nowDay.getDate() === 13) {
@@ -265,7 +265,7 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
             } else if (nowDay.getDate() === 14) {
                 let imageElement1 = document.createElement("img");
                 imageElement1.src = "images/heart_blue2.png";
@@ -283,7 +283,7 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
 
             } else if (nowDay.getDate() === 15) {
                 let imageElement1 = document.createElement("img");
@@ -308,9 +308,9 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "40px";
+                imageElement3.style.left = "30px";
             } else if (nowDay.getDate() === 16) {
                 let imageElement1 = document.createElement("img");
                 imageElement1.src = "images/heart_yellow2.png";
@@ -328,7 +328,7 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
             } else if (nowDay.getDate() === 17) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_green2.png";
@@ -362,7 +362,7 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
             } else if (nowDay.getDate() === 19) {
                 let imageElement1 = document.createElement("img");
                 imageElement1.src = "images/heart_yellow2.png";
@@ -380,7 +380,7 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
             } else if (nowDay.getDate() === 20) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_green2.png";
@@ -415,9 +415,9 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "40px";
+                imageElement3.style.left = "30px";
             } else if (nowDay.getDate() === 22) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_pink2.png";
@@ -451,9 +451,9 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
                 imageElement3.style.position = "absolute";
-                imageElement3.style.left = "40px";
+                imageElement3.style.left = "30px";
             } else if (nowDay.getDate() === 24) {
                 let imageElement = document.createElement("img");
                 imageElement.src = "images/heart_rain2.png";
@@ -481,7 +481,7 @@ function buildCalendar() {
                 imageElement1.style.position = "absolute";
                 imageElement1.style.left = "0";
                 imageElement2.style.position = "absolute";
-                imageElement2.style.left = "20px";
+                imageElement2.style.left = "15px";
             }
             else {
                 let imageElement = document.createElement("img");
